@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wsphub"
+version = "2.1.0"
+description = "WSP Hub CLI & .wsp v2.1 Cryptographic Safetensors/Config Patch Engine"
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Ghazwan Alemara", email = "ghazwan@wsphub.dev" }
+]
+keywords = ["safetensors", "llm", "model-patching", "ed25519", "qwen", "llama", "wsphub"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "cryptography>=42.0.0",
+    "numpy>=1.26.0",
+    "safetensors>=0.4.2",
+    "huggingface_hub>=0.23.0",
+    "httpx>=0.27.0",
+]
+
+[project.urls]
+Homepage = "https://wsphub.dev"
+Documentation = "https://wsphub.dev/verify"
+Repository = "https://github.com/GhazwanAlemara/wsphub"
+Issues = "https://github.com/GhazwanAlemara/wsphub/issues"
+
+[project.scripts]
+wsp = "wsp_cli.cli:main"
+wsphub = "wsp_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
