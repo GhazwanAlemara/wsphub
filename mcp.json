@@ -1,0 +1,14 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema/mcp.json",
+  "mcpServers": {
+    "supernova": {
+      "type": "streamableHttp",
+      "url": "https://supernova.cool/api/v1/mcp/",
+      "headers": {
+        "X-Supernova-Key": "${SUPERNOVA_API_KEY}"
+      },
+      "description": "Federated Supernova + WSP Hub weight-space diagnostics & custom model surgery MCP (https://wsphub.dev/open)"
+    }
+  },
+  "wspRegistry": "https://api.wsphub.dev"
+}
